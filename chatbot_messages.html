@@ -1,0 +1,5 @@
+{% for message in chat_history %}
+    <div class="chat-message {{ 'user-message' if message.type == 'user' else 'bot-message' }}">
+        {{ message.message | safe }}
+    </div>
+{% endfor %}
